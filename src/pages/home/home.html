@@ -9,8 +9,16 @@
 <ion-content padding>
   <ion-card>
     <ion-card-content>
-      <button ion-item (click)="openBodyPage()">
-        Scanne Patienten Barcode!
+      <button ion-button (click)="scanBarcode()">
+        Scanne Patientenbarcode!
+       </button>
+
+       <div *ngIf="results">
+        <p>{{results.text}}</p>
+       </div>
+
+       <button ion-item (click)="openBodyPage()">
+         ok
        </button>
     </ion-card-content>
     
