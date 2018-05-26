@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Alle Verletzungen
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>
+          hier kommt der PatientenBarcode hin!
+        </ion-card-title>
+        <ion-list>
+          <p>hier kommen die ausgewählten item über NgFor oder so hin</p>
+        </ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-sm-6>
+              <button ion-button color="default" round (click)="openBodyPage()">Weitere Einträge</button>
+            </ion-col>
+            <ion-col col-sm-6>
+              <button ion-button color="secondary" round (click)="openHomePage()">Abschicken</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+      
+    </ion-card>
+  </ion-content>
+  

@@ -8,14 +8,12 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SeverityPage } from '../pages/severity/severity';
+import { CartPage } from '../pages/cart/cart';
 import { BodyPage } from '../pages/body/body';
 import { HeadPage } from '../pages/head/head';
 import { FacePage } from '../pages/face/face';
 import { ThoraxPage } from '../pages/thorax/thorax';
 import { OrgansPage } from '../pages/organs/organs';
-
-
-
 
 
 @NgModule({
@@ -24,6 +22,7 @@ import { OrgansPage } from '../pages/organs/organs';
     HomePage,
     BodyPage,
     SeverityPage,
+    CartPage,
     HeadPage,
     FacePage,
     ThoraxPage,
@@ -38,6 +37,7 @@ import { OrgansPage } from '../pages/organs/organs';
     MyApp,
     HomePage,
     SeverityPage,
+    CartPage,
     BodyPage,
     HeadPage,
     FacePage,
