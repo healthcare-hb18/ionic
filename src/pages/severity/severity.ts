@@ -7,6 +7,7 @@ import { CartPage } from '../cart/cart';
   selector: 'page-severity',
   templateUrl: 'severity.html'
 })
+
 export class SeverityPage {
 
   imgSrc: string="assets/imgs/eye/auge.png";
