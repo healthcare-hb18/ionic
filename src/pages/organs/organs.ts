@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { OrgansPage } from '../organs/organs';
+import { SeverityPage } from '../severity/severity';
 
 @Component({
-  selector: 'page-face',
-  templateUrl: 'face.html'
+  selector: 'page-organs',
+  templateUrl: 'organs.html'
 })
-export class FacePage {
+export class OrgansPage {
 
   constructor(public navCtrl: NavController,  public navParams: NavParams) {
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Face');
+    console.log('ionViewDidLoad Organs');
   }
 
-  openOrgansPage(){
-    this.navCtrl.push(OrgansPage);
+  openSeverity() {
+    this.navCtrl.push(SeverityPage);
   }
+
+
 }

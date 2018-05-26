@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Schweregrad 
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-item>
+      <img class="bilder" id="changeImg" [src]="imgSrc"/>
+    </ion-item>
+  
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div text-center>
+             <p  id="changeText">Verletzung</p>
+          </div>
+         
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-item>
+        <ion-range class="ranger" min="1" max="5" step="1" pin="true" snaps="true"[(ngModel)]="picId" color="secondary" (ngModelChange)="onChangeValue(this)">
+          <ion-label range-left>1</ion-label>
+          <ion-label range-right>5</ion-label>
+        </ion-range>
+      </ion-item>
+  
+      <ion-card-content>
+        <ion-list>
+          <div text-center>
+          <button ion-button color="secondary" round>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-8>
+                      <div text-center>
+                        Hinzufügen
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>  
+          </button>
+          </div>
+        </ion-list>
+      </ion-card-content>
+      
+  </ion-content>
+  

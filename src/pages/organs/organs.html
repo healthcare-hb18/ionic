@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
       <ion-title>
-        2: Gesicht
+        Organe
       </ion-title>
     </ion-navbar>
   </ion-header>
@@ -10,11 +10,11 @@
     <ion-card>
       <ion-card-content>
         <ion-list>
-          <button ion-item (click)="openOrgansPage()">
+          <button ion-item>
             <ion-grid>
               <ion-row>
                 <ion-col col-sm-11>
-                  <h2>Organe</h2>
+                  <h2>Ohr</h2>
                 </ion-col>
                 <ion-col col-sm-1>
                   <ion-icon class="forward" name="arrow-forward"></ion-icon>
@@ -23,11 +23,11 @@
             </ion-grid>          
           </button>
           <hr>
-          <button ion-item>
+          <button ion-item (click)="openSeverity()">
               <ion-grid>
                   <ion-row>
                     <ion-col col-sm-11>
-                      <h2>Nerven</h2>
+                      <h2>Auge</h2>
                     </ion-col>
                     <ion-col col-sm-1>
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
@@ -40,7 +40,20 @@
               <ion-grid>
                   <ion-row>
                     <ion-col col-sm-11>
-                      <h2>Knochen</h2>
+                      <h2>Nase</h2>
+                    </ion-col>
+                    <ion-col col-sm-1>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+          </button>
+          <hr>
+          <button ion-item>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-11>
+                      <h2>Mund</h2>
                     </ion-col>
                     <ion-col col-sm-1>
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
