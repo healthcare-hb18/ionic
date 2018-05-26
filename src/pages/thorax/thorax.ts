@@ -1,22 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BodyPage } from '../body/body';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-thorax',
+  templateUrl: 'thorax.html'
 })
-export class HomePage {
+export class ThoraxPage {
 
   constructor(public navCtrl: NavController,  public navParams: NavParams) {
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad homePage');
-  }
-
-  openBodyPage(){
-    this.navCtrl.push(BodyPage);
+    console.log('ionViewDidLoad Thorax');
   }
 }

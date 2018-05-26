@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Wähle Körperregion
+      Start
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,103 +9,9 @@
 <ion-content padding>
   <ion-card>
     <ion-card-content>
-      <ion-list>
-        <button ion-item>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-sm-2>
-                <img src="/assets/imgs/head.png" alt="head" class="small_img">
-              </ion-col>
-              <ion-col col-sm-8>
-                Kopf
-              </ion-col>
-              <ion-col col-sm-2>
-                <ion-icon class="forward" name="arrow-forward"></ion-icon>
-              </ion-col>
-            </ion-row>
-          </ion-grid>          
-        </button>
-        <hr>
-        <button ion-item>
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-sm-2>
-                    <img src="/assets/imgs/face.png" alt="face" class="small_img">
-                  </ion-col>
-                  <ion-col col-sm-8>
-                    Gesicht
-                  </ion-col>
-                  <ion-col col-sm-2>
-                    <ion-icon class="forward" name="arrow-forward"></ion-icon>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>  
-        </button>
-        <hr>
-        <button ion-item>
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-sm-2>
-                    <img src="/assets/imgs/chest.png" alt="chest" class="small_img">
-                  </ion-col>
-                  <ion-col col-sm-8>
-                    Thorax
-                  </ion-col>
-                  <ion-col col-sm-2>
-                    <ion-icon class="forward" name="arrow-forward"></ion-icon>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-        </button>
-        <hr>
-        <button ion-item>
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-sm-2>
-                    <img src="/assets/imgs/abdomen.png" alt="abdomen" class="small_img">
-                  </ion-col>
-                  <ion-col col-sm-8>
-                    Abdomen
-                  </ion-col>
-                  <ion-col col-sm-2>
-                    <ion-icon class="forward" name="arrow-forward"></ion-icon>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>  
-        </button>
-        <hr>
-        <button ion-item>
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-sm-2>
-                    <img src="/assets/imgs/extrem.png" alt="extremities" class="small_img">
-                  </ion-col>
-                  <ion-col col-sm-8>
-                    Extremitäten
-                  </ion-col>
-                  <ion-col col-sm-2>
-                    <ion-icon class="forward" name="arrow-forward"></ion-icon>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>  
-        </button>
-        <hr>
-        <button ion-item>
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-sm-2>
-                    <img src="" alt="">
-                  </ion-col>
-                  <ion-col col-sm-8>
-                    Weichteile und äußere Verletzungen
-                  </ion-col>
-                  <ion-col col-sm-2>
-                    <ion-icon class="forward" name="arrow-forward"></ion-icon>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>  
-        </button>
-      </ion-list>
+      <button ion-item (click)="openBodyPage()">
+        Scanne Patienten Barcode!
+       </button>
     </ion-card-content>
     
   </ion-card>

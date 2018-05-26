@@ -1,0 +1,115 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Wähle Körperregion
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <button ion-item (click)="openHeadPage()">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-sm-2>
+                  <img src="/assets/imgs/head.png" alt="head" class="small_img">
+                </ion-col>
+                <ion-col col-sm-8>
+                  <h2>Kopf</h2>
+                </ion-col>
+                <ion-col col-sm-2>
+                  <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>          
+          </button>
+          <hr>
+          <button ion-item (click)="openFacePage()">
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-2>
+                      <img src="/assets/imgs/face.png" alt="face" class="small_img">
+                    </ion-col>
+                    <ion-col col-sm-8>
+                      <h2>Gesicht</h2>
+                    </ion-col>
+                    <ion-col col-sm-2>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>  
+          </button>
+          <hr>
+          <button ion-item (click)="openThoraxPage()">
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-2>
+                      <img src="/assets/imgs/chest.png" alt="chest" class="small_img">
+                    </ion-col>
+                    <ion-col col-sm-8>
+                      <h2>Thorax</h2>
+                    </ion-col>
+                    <ion-col col-sm-2>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+          </button>
+          <hr>
+          <button ion-item>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-2>
+                      <img src="/assets/imgs/abdomen.png" alt="abdomen" class="small_img">
+                    </ion-col>
+                    <ion-col col-sm-8>
+                      <h2>Abdomen</h2>
+                    </ion-col>
+                    <ion-col col-sm-2>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>  
+          </button>
+          <hr>
+          <button ion-item>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-2>
+                      <img src="/assets/imgs/extrem.png" alt="extremities" class="small_img">
+                    </ion-col>
+                    <ion-col col-sm-8>
+                      <h2>Extremitäten</h2>
+                    </ion-col>
+                    <ion-col col-sm-2>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>  
+          </button>
+          <hr>
+          <button ion-item>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-sm-2>
+                      <img src="/assets/imgs/weich.png" alt="weichteile" class="small_img">
+                    </ion-col>
+                    <ion-col col-sm-8>
+                      <h2>Weichteile, </h2>
+                      <h2>äußere</h2> 
+                      <h2>Verletzungen</h2>
+                    </ion-col>
+                    <ion-col col-sm-2>
+                      <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>  
+          </button>
+        </ion-list>
+      </ion-card-content>
+      
+    </ion-card>
+  </ion-content>
+  

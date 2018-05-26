@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BodyPage } from '../body/body';
+import { FacePage } from '../face/face';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-head',
+  templateUrl: 'head.html'
 })
-export class HomePage {
+export class HeadPage {
 
   constructor(public navCtrl: NavController,  public navParams: NavParams) {
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad homePage');
+    console.log('ionViewDidLoad Head');
   }
 
-  openBodyPage(){
-    this.navCtrl.push(BodyPage);
+  openFacePage(){
+    this.navCtrl.push(FacePage);
   }
 }
