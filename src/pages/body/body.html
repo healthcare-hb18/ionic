@@ -5,12 +5,29 @@
       </ion-title>
     </ion-navbar>
   </ion-header>
-  
+
   <ion-content padding>
     <ion-card>
       <ion-card-content>
         <ion-list>
-          <button ion-item (click)="openHeadPage()">
+          <button ion-item *ngFor="let AIS of AISData" (click)="openListPage(AIS.sub, AIS.name)">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-sm-2>
+                  <img src={{AIS.src}} class="small_img">
+                </ion-col>
+                <ion-col col-sm-8>
+                  <h2>{{AIS.name}}</h2>
+                </ion-col>
+                <ion-col col-sm-2>
+                  <ion-icon class="forward" name="arrow-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </button>
+
+
+          <!--<button ion-item (click)="openHeadPage()">
             <ion-grid>
               <ion-row>
                 <ion-col col-sm-2>
@@ -23,7 +40,7 @@
                   <ion-icon class="forward" name="arrow-forward"></ion-icon>
                 </ion-col>
               </ion-row>
-            </ion-grid>          
+            </ion-grid>
           </button>
           <hr>
           <button ion-item (click)="openFacePage()">
@@ -39,7 +56,7 @@
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
                     </ion-col>
                   </ion-row>
-                </ion-grid>  
+                </ion-grid>
           </button>
           <hr>
           <button ion-item (click)="openThoraxPage()">
@@ -71,7 +88,7 @@
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
                     </ion-col>
                   </ion-row>
-                </ion-grid>  
+                </ion-grid>
           </button>
           <hr>
           <button ion-item>
@@ -87,7 +104,7 @@
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
                     </ion-col>
                   </ion-row>
-                </ion-grid>  
+                </ion-grid>
           </button>
           <hr>
           <button ion-item>
@@ -98,18 +115,17 @@
                     </ion-col>
                     <ion-col col-sm-8>
                       <h2>Weichteile, </h2>
-                      <h2>äußere</h2> 
+                      <h2>äußere</h2>
                       <h2>Verletzungen</h2>
                     </ion-col>
                     <ion-col col-sm-2>
                       <ion-icon class="forward" name="arrow-forward"></ion-icon>
                     </ion-col>
                   </ion-row>
-                </ion-grid>  
-          </button>
+                </ion-grid>
+          </button>-->
         </ion-list>
       </ion-card-content>
-      
+
     </ion-card>
   </ion-content>
-  

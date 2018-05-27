@@ -11,40 +11,50 @@ import { CartPage } from '../cart/cart';
 export class SeverityPage {
 
   imgSrc: string="assets/imgs/eye/auge.png";
+  list: any;
+  severityDescriptions;
 
   constructor(public navCtrl: NavController,  public navParams: NavParams) {
+
+  }
+
+  ionViewDidLoad() {
+    this.list = this.navParams.get('sub');
+    this.severityDescriptions = {};
+    for (let i = 0; i < this.list.length; i++) {
+      let code = this.list[i].code;
+      let severity = code.split('.')[1];
+      console.log(severity);
+      let currentValue = this.severityDescriptions[severity];
+      console.log(currentValue);
+      this.severityDescriptions[severity] = (currentValue !== undefined) ? (this.severityDescriptions[severity] + "; " + this.list[i].name) : this.list[i].name;
+    }
+    console.log(this.severityDescriptions);
 
   }
 
   onChangeValue(obj) {
     var currImg = document.querySelector('#changeImg');
     var currText = document.querySelector('#changeText');
-    console.log(currText.innerHTML);
-
+    currText.innerHTML = this.severityDescriptions[obj.picId] == undefined ? "" : this.severityDescriptions[obj.picId];
     switch(obj.picId){
-      case 1: 
+      case 1:
         currImg.setAttribute('src', 'assets/imgs/eye/auge.png');
-        currText.innerHTML = "Verletzung";     
         break;
       case 2:
         currImg.setAttribute('src', 'assets/imgs/eye/auge2.jpg');
-        currText.innerHTML = "Verletzung mit Retinaablösung oder Verletzung der äußeren Augenhaut; Abriss, mit Enukleation einseitig";     
         break;
       case 3:
         currImg.setAttribute('src', 'assets/imgs/eye/auge3.jpg');
-        currText.innerHTML = "Abriss, mit Enukleation beidseitig";
         break;
       case 4:
         currImg.setAttribute('src', 'assets/imgs/eye/auge4.jpg');
-        currText.innerHTML = "";
         break;
       case 5:
         currImg.setAttribute('src', 'assets/imgs/eye/auge5.jpg');
-        currText.innerHTML = "";
         break;
       default:
         currImg.setAttribute('src', 'assets/imgs/eye/auge.png');
-        currText.innerHTML = "";
         break;
     }
   }

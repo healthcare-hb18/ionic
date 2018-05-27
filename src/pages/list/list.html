@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <div *ngFor="let item of list">
+        <button ion-item (click)="openListPage(item.sub, item.name)">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-sm-11>
+                <h2>{{item.name}}</h2>
+              </ion-col>
+              <ion-col col-sm-1>
+                <ion-icon class="forward" name="arrow-forward"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </button>
+        <hr />
+        </div>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

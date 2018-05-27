@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {IonicApp, IonicErrorHandler, IonicModule, IonicPageModule} from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -14,6 +14,7 @@ import { HeadPage } from '../pages/head/head';
 import { FacePage } from '../pages/face/face';
 import { ThoraxPage } from '../pages/thorax/thorax';
 import { OrgansPage } from '../pages/organs/organs';
+import {ListPage} from "../pages/list/list";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { OrgansPage } from '../pages/organs/organs';
     HeadPage,
     FacePage,
     ThoraxPage,
-    OrgansPage
+    OrgansPage,
+    ListPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { OrgansPage } from '../pages/organs/organs';
     HeadPage,
     FacePage,
     ThoraxPage,
-    OrgansPage
+    OrgansPage,
+    ListPage
   ],
   providers: [
     StatusBar,
