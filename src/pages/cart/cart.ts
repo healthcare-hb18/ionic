@@ -9,8 +9,14 @@ import { HomePage } from '../home/home';
 })
 export class CartPage {
 
-  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+  scan: any;
 
+  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+    if (navParams.get("scan") == null) {
+      this.scan ={ "text" : "PatientenNummer"};
+    } else {
+      this.scan = navParams.get("scan");
+    }   
   }
 
   ionViewDidLoad() {

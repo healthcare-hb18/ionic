@@ -10,8 +10,10 @@ import { ThoraxPage } from '../thorax/thorax';
 })
 export class BodyPage {
 
-  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+  scan: any;
 
+  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+    this.scan = navParams.get("results");
   }
 
   ionViewDidLoad() {
@@ -19,15 +21,21 @@ export class BodyPage {
   }
 
   openHeadPage(){
-    this.navCtrl.push(HeadPage);
+    this.navCtrl.push(HeadPage, {
+      scan: this.scan
+    });
   }
 
   openFacePage() {
-    this.navCtrl.push(FacePage);
+    this.navCtrl.push(FacePage, {
+      scan: this.scan
+    });
   }
 
   openThoraxPage() {
-    this.navCtrl.push(ThoraxPage);
+    this.navCtrl.push(ThoraxPage, {
+      scan: this.scan
+    });
   }
 
 }

@@ -8,8 +8,10 @@ import { OrgansPage } from '../organs/organs';
 })
 export class FacePage {
 
-  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+  scan: any;
 
+  constructor(public navCtrl: NavController,  public navParams: NavParams) {
+    this.scan = navParams.get("scan");
   }
 
   ionViewDidLoad() {
@@ -17,6 +19,8 @@ export class FacePage {
   }
 
   openOrgansPage(){
-    this.navCtrl.push(OrgansPage);
+    this.navCtrl.push(OrgansPage, {
+      scan: this.scan
+    });
   }
 }

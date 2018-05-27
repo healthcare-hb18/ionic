@@ -21,10 +21,14 @@ export class HomePage {
 
   async scanBarcode() {
     this.results = await this.barcode.scan();
-
   }
 
   openBodyPage(){
-    this.navCtrl.push(BodyPage);
+    if (this.results == undefined) {
+      this.results = {};
+    }
+    this.navCtrl.push(BodyPage, {
+      results: this.results
+    });
   }
 }

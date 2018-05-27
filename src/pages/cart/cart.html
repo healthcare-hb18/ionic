@@ -10,11 +10,29 @@
     <ion-card>
       <ion-card-content>
         <ion-card-title>
-          hier kommt der PatientenBarcode hin!
+          {{ scan.text }}
         </ion-card-title>
         <ion-list>
-          <p>hier kommen die ausgewählten item über NgFor oder so hin</p>
+          <ion-item>
+            <h4 class="ais">441010.3</h4>
+            <p class="region">Thorax</p>
+            <p class="info">Verletzung, ohne Perforation</p>
+          </ion-item>
+          <ion-item>
+              <h4 class="ais">771099.1</h4>
+              <p class="region">Extremitäten</p>
+              <p class="info">Schulter glenohumeral (Verstauchung, Subluxation)</p>
+          </ion-item>
+          <ion-item>
+            <h4 class="ais">240403.3</h4>
+            <p class="region">Gesicht</p>
+            <p class="info">AugeAbriss, Enukleation beidseitig</p>
+          </ion-item>
         </ion-list>
+        <ion-item>
+          <h2>ISS</h2>
+          <p>19</p>
+        </ion-item>
         <ion-grid>
           <ion-row>
             <ion-col col-sm-6>

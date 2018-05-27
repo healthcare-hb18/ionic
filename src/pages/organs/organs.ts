@@ -7,9 +7,11 @@ import { SeverityPage } from '../severity/severity';
   templateUrl: 'organs.html'
 })
 export class OrgansPage {
+  
+  scan: any;
 
   constructor(public navCtrl: NavController,  public navParams: NavParams) {
-
+    this.scan = navParams.get("scan");
   }
 
   ionViewDidLoad() {
@@ -17,7 +19,9 @@ export class OrgansPage {
   }
 
   openSeverity() {
-    this.navCtrl.push(SeverityPage);
+    this.navCtrl.push(SeverityPage, {
+      scan: this.scan
+    });
   }
 
 
